@@ -3,17 +3,13 @@ using namespace std;
 
 /**
 	RA21-Q1
-	All tests passed
+	All tests
 	Solution: 
 	Complexity:  
 */
 
-void solve(int caseNum) 
+void readInGrid(int r, int c, vector<vector<int> >& grid)
 {
-	// Read in grids 
-	int r = 0; int c = 0; int t = 0;
-	cin >> r >> c;
-	vector<vector<int> > grid;
 	for (int i = 0; i < r; ++i)
 	{
 		vector<int> v;
@@ -24,6 +20,18 @@ void solve(int caseNum)
 		}
 		grid.push_back(v);
 	}
+} 
+
+void solve(int caseNum) 
+{
+	// Read in grids 
+	int r = 0; int c = 0; int t = 0;
+	cin >> r >> c;
+	vector<vector<int> > grid;
+	readInGrid(r, c, grid);
+	int ans = 0;
+	cout << "Case #" << caseNum << ": ";
+	cout << ans << endl;
 } 
 
 int main()
